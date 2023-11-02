@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
+
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-side-navigation',
+  templateUrl: './side-navigation.component.html',
+  styleUrls: ['./side-navigation.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class SideNavigationComponent {
   link = '/contents';
   expanded: any;
   mobileMenuActive = false;
