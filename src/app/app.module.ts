@@ -12,6 +12,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { CommunicationComponent } from './pages/communication/communication.component';
@@ -34,7 +36,8 @@ import { CommunicationComponent } from './pages/communication/communication.comp
     MatSidenavModule,
     MatIconModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

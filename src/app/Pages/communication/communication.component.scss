@@ -1,0 +1,29 @@
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.name-email{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+
+
+.alert-success{
+    margin-block: 1rem;
+    padding: 0.5rem 1rem;
+    color: #155724; 
+    background-color: #d4edda;
+}
+
+.alert-danger{
+    margin-block: 1rem;
+    padding: 0.5rem 1rem;
+    color: #721c24; 
+    background-color: #f8d7da;
+}
