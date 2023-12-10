@@ -1,11 +1,95 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    margin: 0;     
+    font-family: "Nunito",sans-serif !important
+}
 
 
 *,
 *:before,
 *:after {
     box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span, div, li, ul, ol, button, input, textarea, select {
+    color: rgb(84, 99, 110)
+}
+
+h1{
+    font-size: 35px ;
+    font-weight: 800 ;
+    margin: 0px;
+}
+
+h3{
+    margin: 0px;
+}
+
+p, a{
+    font-size: 14px;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(110 176 66);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 3rem;
+    padding-block: 2rem;
+    width: 100%;
+    gap: 2rem;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 2rem;
+}
+
+.size-12{
+    display: flex;
+    width: 100%;
+}
+
+.size-7{
+    display: flex;
+    width: 58%;
+}
+
+.size-5{
+    display: flex;
+    width: 42%;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+.card-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 20px 0;
+
+    a{
+        font-weight: 800;
+        text-decoration: underline;
+    }
 }
