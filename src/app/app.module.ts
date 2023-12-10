@@ -14,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { CommunicationComponent } from './pages/communication/communication.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     AppComponent,
     HomeComponent,
     SideNavigationComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    CommunicationComponent
   ],
   imports: [
     BrowserModule,
