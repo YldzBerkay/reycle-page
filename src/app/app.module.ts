@@ -13,13 +13,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SideNavigationComponent
+    SideNavigationComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
