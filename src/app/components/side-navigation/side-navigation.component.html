@@ -27,7 +27,7 @@
             <div class="side-nav-items">
                 <div class="side-nav-item">
                     <div class="side-nav-item-button" type="button" routerLinkActive="active"
-                        [routerLink]="['/home']" [ngClass]="{'active': urlPath('') && !urlPath('/about-us')}">
+                        [routerLink]="['/home']" [ngClass]="{'active': urlPath('') && !urlPath('/about-us') && !urlPath('/communication')}">
                         <mat-icon fontIcon="home"></mat-icon>
                         <span *ngIf="isExpanded" class="side-nav-item-button-span">Home</span>
                     </div>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="side-nav-item">
-                    <div class="side-nav-item-button" type="button" routerLinkActive="home-active"
+                    <div class="side-nav-item-button" type="button" routerLinkActive="active"
                         [routerLink]="['/communication']">
                         <mat-icon fontIcon="email"></mat-icon>
                         <span *ngIf="isExpanded" class="side-nav-item-button-span">Communication</span>
