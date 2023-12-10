@@ -27,13 +27,13 @@
             <div class="side-nav-items">
                 <div class="side-nav-item">
                     <div class="side-nav-item-button" type="button" routerLinkActive="active"
-                        [routerLink]="['/home']" [ngClass]="{'active': urlPath('') || urlPath('/home')}">
+                        [routerLink]="['/home']" [ngClass]="{'active': urlPath('') && !urlPath('/about-us')}">
                         <mat-icon fontIcon="home"></mat-icon>
                         <span *ngIf="isExpanded" class="side-nav-item-button-span">Home</span>
                     </div>
                 </div>
                 <div class="side-nav-item">
-                    <div class="side-nav-item-button" type="button" routerLinkActive="home-active"
+                    <div class="side-nav-item-button" type="button" routerLinkActive="active"
                         [routerLink]="['/about-us']">
                         <mat-icon fontIcon="info"></mat-icon>
                         <span *ngIf="isExpanded" class="side-nav-item-button-span">About Us</span>
