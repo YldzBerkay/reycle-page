@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Location } from '@angular/common';
 
 
@@ -35,15 +35,24 @@ export class SideNavigationComponent {
     }
   }
 
-  getMargin(): string {
-    let setMargin = "0"; // Default value for small screens
+  @ViewChild('buttonRef', { static: true }) buttonRef!: ElementRef;
+    @HostListener('window:resize', ['$event'])
+    onWindowResize(event: any) {
+        const isSmallScreen = this.isSmallScreen();
+        const storedValue = localStorage.getItem('expanded');
 
-    if (!this.isSmallScreen()) {
-      setMargin = this.isExpanded ? "13.5" : "5";
+        if (isSmallScreen) {
+            if (this.shouldClick) {
+                this.isOpened = false;
+                this.shouldClick = false;
+                this.isExpanded = true;
+            }
+        } else {
+            this.shouldClick = true;
+            this.isExpanded = storedValue ? JSON.parse(storedValue) : false;
+            this.isOpened = true;
+        }
     }
-
-    return setMargin;
-  }
 
   urlPath(url: string) {
     const path = this.location.path();

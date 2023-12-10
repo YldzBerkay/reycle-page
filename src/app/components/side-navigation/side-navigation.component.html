@@ -1,54 +1,53 @@
+<mat-toolbar>
+    <button #buttonRef (click)="sidenav.toggle()" class="auto-click"></button>
+    
+    <button class="expand-button-mat-icon">
+            <mat-icon class="expand-button" (click)="isExpanded = !isExpanded; saveData();" fontIcon="menu"
+                [ngClass]="{ rotated: isExpanded }"></mat-icon>
+    </button>
+
+    <button mat-list-icon class="hamburger" (click)="sidenav.toggle()">
+        <div class="hamburger-div">
+            <mat-icon class="menu-icon">menu</mat-icon>
+        </div>
+    </button>
+    <button class="side-navigation-logo" disableRipple="true"
+        [routerLink]="['/home']">
+        <img src="assets/img/recycling_icon.png">
+    </button>
+    <span class="mat-toolbar-spacer"></span>
+</mat-toolbar>
+
+
+
 <mat-drawer-container autosize>
     <mat-drawer [disableClose]="!isSmallScreen()" position="start" #sidenav [mode]="isSmallScreen() ? 'over' : 'side'"
         opened="isExpanded" opened="{{isOpened}}" class="sidenav-container">
         <div>
-            <div class="expand-button-content">
-                <div class="expand-button-mat-icon">
-                    <mat-icon class="expand-button" (click)="isExpanded = !isExpanded; saveData();" fontIcon="menu"
-                        [ngClass]="{ rotated: isExpanded }"></mat-icon>
-                    <div>
-                        <button class="side-navigation-logo-extended" disableRipple="true"
-                            [ngStyle]="{'display': !isExpanded ? 'none' : 'flex'}"
-                            [routerLink]="['/home']">
-                            <img src="assets/img/recycling_icon.png">
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="mobile-expanded">
-                <img class="mobile-expanded-logo-img" src="assets/img/recycling_icon.png">
-            </div>
-
             <div class="side-nav-items">
                 <div class="side-nav-item">
-                    <div class="side-nav-item-button" type="button"
-                        routerLinkActive="home-active"
+                    <div class="side-nav-item-button" type="button" routerLinkActive="home-active"
                         [routerLink]="['/home']">
                         <mat-icon fontIcon="home"></mat-icon>
                         <span *ngIf="isExpanded" class="side-nav-item-button-span">Home</span>
                     </div>
                 </div>
                 <div class="side-nav-item">
-                    <div class="side-nav-item-button" type="button"
-                        routerLinkActive="home-active"
+                    <div class="side-nav-item-button" type="button" routerLinkActive="home-active"
                         [routerLink]="['/about-us']">
                         <mat-icon fontIcon="info"></mat-icon>
                         <span *ngIf="isExpanded" class="side-nav-item-button-span">About Us</span>
                     </div>
                 </div>
                 <div class="side-nav-item">
-                    <div class="side-nav-item-button" type="button"
-                        routerLinkActive="home-active"
+                    <div class="side-nav-item-button" type="button" routerLinkActive="home-active"
                         [routerLink]="['/communication']">
                         <mat-icon fontIcon="email"></mat-icon>
                         <span *ngIf="isExpanded" class="side-nav-item-button-span">Communication</span>
                     </div>
                 </div>
                 <div class="side-nav-item">
-                    <div class="side-nav-item-button" type="button"
-                        routerLinkActive="home-active"
+                    <div class="side-nav-item-button" type="button" routerLinkActive="home-active"
                         [routerLink]="['/become-driver']">
                         <mat-icon fontIcon="drive_eta"></mat-icon>
                         <span *ngIf="isExpanded" class="side-nav-item-button-span">Become Driver</span>
@@ -59,27 +58,10 @@
     </mat-drawer>
 
     <mat-drawer-content>
-        <mat-toolbar>
-            <button #buttonRef (click)="sidenav.toggle()" class="auto-click"></button>
-            <button mat-list-icon class="hamburger" (click)="sidenav.toggle()">
-                <div class="hamburger-div">
-                    <mat-icon class="menu-icon">menu</mat-icon>
-                </div>
-            </button>
-            <button class="side-navigation-logo" disableRipple="true"
-                [ngStyle]="{'display': isExpanded ? 'none' : 'flex'}"
-                [routerLink]="['/home']">
-                <img src="assets/img/recycling_icon.png">
-            </button>
-            <span class="mat-toolbar-spacer"></span>
-
-            
-        </mat-toolbar>
         <div class="page-content">
             <ng-content>
             </ng-content>
         </div>
-
     </mat-drawer-content>
 
 </mat-drawer-container>
