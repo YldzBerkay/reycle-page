@@ -26,8 +26,8 @@
         <div>
             <div class="side-nav-items">
                 <div class="side-nav-item">
-                    <div class="side-nav-item-button" type="button" routerLinkActive="home-active"
-                        [routerLink]="['/home']">
+                    <div class="side-nav-item-button" type="button" routerLinkActive="active"
+                        [routerLink]="['/home']" [ngClass]="{'active': urlPath('') || urlPath('/home')}">
                         <mat-icon fontIcon="home"></mat-icon>
                         <span *ngIf="isExpanded" class="side-nav-item-button-span">Home</span>
                     </div>
