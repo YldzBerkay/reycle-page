@@ -13,13 +13,13 @@
     color: white;
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
     .expand-button-mat-icon {
         display: none;
     }
 
     .hamburger {
-        display: flex;
+        display: flex !important;
     }
 
     .mobile-expanded {

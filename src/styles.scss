@@ -39,6 +39,8 @@ a{
 
 .container{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     padding-inline: 3rem;
     padding-block: 2rem;
@@ -50,17 +52,22 @@ a{
     display: flex;
     flex-direction: row;
     width: 100%;
+    max-width: 1200px;
     gap: 2rem;
 }
 
 .size-12{
     display: flex;
     width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .size-7{
     display: flex;
     width: 58%;
+    justify-content: center;
+    align-items: center;
 }
 
 .size-5{
