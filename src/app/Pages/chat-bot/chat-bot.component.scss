@@ -1,0 +1,60 @@
+.input-area{
+    display: flex;
+    margin-top: 2rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+.input-area-button{
+    display: flex;
+    height: 56px;
+}
+
+.input-area-button{
+    background-color: #6EB043 !important;
+    color: white !important; 
+}
+
+::ng-deep .mdc-button__label{
+    color: white !important;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+}
+
+.conversition{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-height: 750px;
+    overflow-y: auto;
+    gap: .5rem;
+}
+
+.bot-message{
+    margin-bottom: 1rem;
+}
+
+.sender{
+    width: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}

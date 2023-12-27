@@ -39,7 +39,7 @@ a{
 
 .container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     padding-inline: 3rem;
@@ -116,4 +116,12 @@ a{
 
 iframe{
     min-width: 150px !important;
+}
+
+mat-divider{
+    display: flex !important;
+    width: 100% !important;
+    margin: .5rem 0 !important;
+    height: 2px;
+    --mat-divider-width: 2px !important
 }
