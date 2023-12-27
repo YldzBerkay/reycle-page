@@ -17,6 +17,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { CommunicationComponent } from './pages/communication/communication.component';
+import { FormsModule } from '@angular/forms';
+import { ChatBotComponent } from './pages/chat-bot/chat-bot.component';
+import { ChatServiceService } from './services/chat-service.service';
+import { HttpClientModule } from '@angular/common/http';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
@@ -25,7 +30,8 @@ import { CommunicationComponent } from './pages/communication/communication.comp
     HomeComponent,
     SideNavigationComponent,
     AboutUsComponent,
-    CommunicationComponent
+    CommunicationComponent,
+    ChatBotComponent
   ],
   imports: [
     BrowserModule,
@@ -38,8 +44,13 @@ import { CommunicationComponent } from './pages/communication/communication.comp
     MatToolbarModule,
     MatMenuModule,
     MatInputModule,
+    FormsModule,
+    HttpClientModule,
+    MatDividerModule
   ],
-  providers: [],
+  providers: [
+    ChatServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <h1>Recycling Gate Chat Bot</h1>
+    </div>
+    <div class="size-12">
+        <div class="card-container">
+            <h3>You can get information about Recycling Gate by asking your questions to our artificial intelligence bot.</h3>
+
+            <mat-divider></mat-divider>
+
+            <div class="conversition" *ngFor="let entry of conversation" [ngClass]="{'bot-message': entry.sender === 'Bot'}">
+                <div class="text-box">
+                    <strong class="sender">{{ entry.sender }} <span>:</span></strong> {{ entry.message }}
+                </div>
+            </div>
+
+            <div class="input-area">
+                <mat-form-field class="example-full-width">
+                    <input matInput [(ngModel)]="userInput" type="text" placeholder="Type your message">
+                </mat-form-field>
+                <button mat-flat-button class="input-area-button" (click)="sendMessage()">Send</button>
+
+            </div>
+        </div>
+    </div>
+</div>
