@@ -22,7 +22,10 @@ import { ChatBotComponent } from './pages/chat-bot/chat-bot.component';
 import { ChatServiceService } from './services/chat-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import {MatDividerModule} from '@angular/material/divider';
-
+import { LocationsComponent } from './pages/locations/locations.component';
+import { MapComponent } from './components/map/map.component';
+import { environment } from 'src/environments/environment';
+import { GoogleMapsModule } from '@angular/google-maps'
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import {MatDividerModule} from '@angular/material/divider';
     SideNavigationComponent,
     AboutUsComponent,
     CommunicationComponent,
-    ChatBotComponent
+    ChatBotComponent,
+    LocationsComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,9 @@ import {MatDividerModule} from '@angular/material/divider';
     MatInputModule,
     FormsModule,
     HttpClientModule,
-    MatDividerModule
+    MatDividerModule,
+    GoogleMapsModule
+
   ],
   providers: [
     ChatServiceService

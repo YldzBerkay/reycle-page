@@ -27,7 +27,7 @@
             <div class="side-nav-items">
                 <div class="side-nav-item">
                     <div class="side-nav-item-button" type="button" routerLinkActive="active"
-                        [routerLink]="['/home']" [ngClass]="{'active': urlPath('') && !urlPath('/about-us') && !urlPath('/communication') && !urlPath('/chat')}">
+                        [routerLink]="['/home']" [ngClass]="{'active': urlPath('') && !urlPath('/about-us') && !urlPath('/communication') && !urlPath('/chat') && !urlPath('/locations')}">
                         <mat-icon fontIcon="home"></mat-icon>
                         <span *ngIf="isExpanded" class="side-nav-item-button-span">Home</span>
                     </div>
@@ -51,6 +51,13 @@
                         [routerLink]="['/chat']">
                         <mat-icon fontIcon="chat"></mat-icon>
                         <span *ngIf="isExpanded" class="side-nav-item-button-span">Ai Asistant</span>
+                    </div>
+                </div>
+                <div class="side-nav-item">
+                    <div class="side-nav-item-button" type="button" routerLinkActive="active"
+                        [routerLink]="['/locations']">
+                        <mat-icon fontIcon="location_on"></mat-icon>
+                        <span *ngIf="isExpanded" class="side-nav-item-button-span">Locations</span>
                     </div>
                 </div>
             </div>

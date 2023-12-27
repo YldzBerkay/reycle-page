@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { CommunicationComponent } from './pages/communication/communication.component';
 import { ChatBotComponent } from './pages/chat-bot/chat-bot.component';
+import { LocationsComponent } from './pages/locations/locations.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: 'about-us', component: AboutUsComponent},
   {path: 'communication', component: CommunicationComponent},
   {path: 'chat', component: ChatBotComponent},
+  {path: 'locations', component: LocationsComponent},
   {path: '**', component: HomeComponent, redirectTo: ''},
 ];
 

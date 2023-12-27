@@ -1,0 +1,3 @@
+<google-map height="400px" width="100%" [center]="locations[0]" [zoom]="6">
+    <map-marker *ngFor="let location of locations" [position]="location" [title]="location.label"></map-marker>
+</google-map>
