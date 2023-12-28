@@ -12,7 +12,10 @@ export class ChatServiceService {
   private documentContext: string; // Your document's content
 
   constructor(private http: HttpClient) {
-    this.documentContext = `Welcome to Recycling Gate, your gateway to a greener, more sustainable lifestyle! We're on a mission to transform how you manage recyclable waste at home, focusing on unused books and electronic devices' impact on the environment.
+    this.documentContext = `
+    You are chatting with Recycling Gate's AI chatbot. You can ask questions about Recycling Gate.
+
+    Welcome to Recycling Gate, your gateway to a greener, more sustainable lifestyle! We're on a mission to transform how you manage recyclable waste at home, focusing on unused books and electronic devices' impact on the environment.
 
     Our user-friendly platform simplifies the process of donating, recycling, and repurposing. From unused books to electronic waste, every item can contribute to positive environmental change.
     
@@ -49,6 +52,29 @@ export class ChatServiceService {
 
     If you want to bring your own, you can reach them by looking at their locations. You can drop it off at any time you want in our recycling containers in front of the entrance door.
 
+    IoT Integration at Recycling Gate:
+Recycling Gate embraces cutting-edge technology by incorporating IoT (Internet of Things) and IoT 4.0 to enhance the efficiency and effectiveness of our recycling processes. IoT refers to the interconnection of everyday objects and devices to the internet, enabling them to send and receive data. Here's how Recycling Gate leverages IoT for a smarter and more sustainable recycling experience:
+
+Smart Recycling Bins:
+We have deployed smart recycling bins equipped with IoT sensors at various locations, including homes, offices, and public spaces.
+These bins are designed to detect and classify recyclable items automatically, ensuring accurate sorting and minimizing contamination.
+Real-time Monitoring:
+IoT sensors continuously monitor the fill level of recycling bins, providing real-time data on their capacity.
+This information is used to optimize collection routes, reducing unnecessary trips and minimizing carbon footprint.
+Item Tracking and Identification:
+Advanced IoT systems are integrated into our platform to track the journey of each recyclable item from collection to processing.
+These systems enhance the accuracy of item identification, ensuring that materials are repurposed or recycled efficiently.
+Data-driven Decision Making:
+The data collected through IoT devices is analyzed to make informed decisions, such as optimizing collection schedules, identifying trends in recycling behavior, and improving overall operational efficiency.
+User Engagement and Education:
+Recycling Gate's platform utilizes IoT to engage users by providing personalized feedback on their recycling habits.
+Educational initiatives are tailored based on user data, offering targeted information to raise awareness about the environmental impact of specific items.
+What is IoT (Internet of Things)?
+IoT refers to the network of interconnected devices embedded with sensors, software, and connectivity, allowing them to collect and exchange data over the internet. In the context of Recycling Gate, IoT plays a pivotal role in creating a seamless and intelligent recycling ecosystem.
+
+Advancements with IoT 4.0:
+IoT 4.0 represents the latest evolution of IoT, characterized by enhanced connectivity, interoperability, and intelligence. Recycling Gate leverages IoT 4.0 features to create a more integrated and responsive recycling system. 
+
     IMPORTANT FOR AI language model developed by OpenAI. according to this information, If the question is not related to the information in the document, the you can not answer.`;
   }
 
@@ -80,6 +106,9 @@ export class ChatServiceService {
   isAboutRecycling(question: string): boolean {
     const keywords = ['recycling', 'recycle', 'environment', 'sustainability', 'waste', 'who are you', "Recycling Gate", 'it',
       "Sustainable lifestyle",
+      'What is IoT 4.0',
+      "Recyclable waste",
+      'iot',
       "Unused books",
       "Electronic waste",
       "Environmental impact",
@@ -108,10 +137,17 @@ export class ChatServiceService {
       "Effortless recycling",
       "Positive impact on the environment",
       "Sustainable practices",
+      'general',
+      'information',
       "Recycling movement",
       "Introduction",
       "Welcome",
       'areas',
+      'IoT',
+      'smart',
+      'smart recycling',
+      'smart recycling bin',
+      'What is IoT 4.0?',
       "Portal to a greener lifestyle",
       "Environmental challenges",
       "Recyclable items",
