@@ -5,6 +5,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { CommunicationComponent } from './pages/communication/communication.component';
 import { ChatBotComponent } from './pages/chat-bot/chat-bot.component';
 import { LocationsComponent } from './pages/locations/locations.component';
+import { ObjectDetectionComponent } from './components/object-detection/object-detection.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'communication', component: CommunicationComponent},
   {path: 'chat', component: ChatBotComponent},
   {path: 'locations', component: LocationsComponent},
+  {path: 'detection', component: ObjectDetectionComponent},
   {path: '**', component: HomeComponent, redirectTo: ''},
 ];
 

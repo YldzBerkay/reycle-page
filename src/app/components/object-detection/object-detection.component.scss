@@ -1,0 +1,12 @@
+video,
+canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.detection {
+    position: relative;
+    height: 544px;
+}

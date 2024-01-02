@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import '@tensorflow/tfjs-backend-webgl';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,7 +26,8 @@ import {MatDividerModule} from '@angular/material/divider';
 import { LocationsComponent } from './pages/locations/locations.component';
 import { MapComponent } from './components/map/map.component';
 import { environment } from 'src/environments/environment';
-import { GoogleMapsModule } from '@angular/google-maps'
+import { GoogleMapsModule } from '@angular/google-maps';
+import { ObjectDetectionComponent } from './components/object-detection/object-detection.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { GoogleMapsModule } from '@angular/google-maps'
     CommunicationComponent,
     ChatBotComponent,
     LocationsComponent,
-    MapComponent
+    MapComponent,
+    ObjectDetectionComponent,
   ],
   imports: [
     BrowserModule,
