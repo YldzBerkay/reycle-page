@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import OpenAI from "openai";
-import { environment } from 'src/environments/environment';
+// import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -77,10 +77,10 @@ IoT 4.0 represents the latest evolution of IoT, characterized by enhanced connec
 
     IMPORTANT FOR AI language model developed by OpenAI. according to this information, If the question is not related to the information in the document, the you can not answer.`;
   }
-
+// deleted from bearer ${environment.apiKey}
   public sendMessage(message: string): Observable<any> {
     const headers = new HttpHeaders({
-      'Authorization': `Bearer ${environment.apiKey}`,
+      'Authorization': `Bearer`,
       'Content-Type': 'application/json'
     });
 
